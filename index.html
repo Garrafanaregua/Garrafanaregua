@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Internet Algar Telecom</title>
+  <!-- Fonte Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      /* Fundo com imagem verde */
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      /* Adiciona um filtro escuro para destacar o conteúdo */
+      position: relative;
+    }
+    /* Camada escura para melhorar contraste */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15, 111, 63, 0.7); /* verde escuro transparente */
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 20px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+    p {
+      font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .plans {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      line-height: 1.6;
+      color: #d9ffd9;
+    }
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: #25d366;
+      color: #fff;
+      text-decoration: none;
+      padding: 16px 30px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      border-radius: 50px;
+      box-shadow: 0 6px 15px rgba(37, 211, 102, 0.5);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-whatsapp:hover {
+      background-color: #1ebe5d;
+      box-shadow: 0 8px 20px rgba(30, 200, 80, 0.7);
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .btn-whatsapp {
+        font-size: 1.1rem;
+        padding: 14px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Internet fibra óptica Algar Telecom</h1>
+    <p>
+      Internet fibra óptica Algar Telecom com planos rápidos e preços que cabem no seu bolso,
+      com até 1GB de velocidade. Atendimento personalizado e instalação rápida nas principais cidades de MG e SP,
+      com contato direto e rápido pelo WhatsApp.
+    </p>
+    <p class="plans">
+      Planos disponíveis:<br />
+      • 300 MB – R$ 100<br />
+      • 600 MB – R$ 110<br />
+      • 1 GB – R$ 160
+    </p>
+    <a href="https://wa.me/5534996743636" target="_blank" class="btn-whatsapp" rel="noopener noreferrer">
+      Fale agora pelo WhatsApp
+    </a>
+  </div>
+</body>
+</html>

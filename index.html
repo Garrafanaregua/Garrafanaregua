@@ -1,115 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Internet Algar Telecom</title>
-  <!-- Fonte Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      /* Fundo com imagem verde */
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
-      background-size: cover;
-      /* Adiciona um filtro escuro para destacar o conteúdo */
-      position: relative;
-    }
-    /* Camada escura para melhorar contraste */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(15, 111, 63, 0.7); /* verde escuro transparente */
-      z-index: 0;
-    }
-    .container {
-      position: relative;
-      z-index: 1;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 40px 30px;
-      border-radius: 20px;
-      max-width: 420px;
-      width: 100%;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-      text-align: center;
-      backdrop-filter: blur(10px);
-    }
-    h1 {
-      font-weight: 700;
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    }
-    p {
-      font-weight: 400;
-      font-size: 1.1rem;
-      line-height: 1.5;
-      margin-bottom: 20px;
-    }
-    .plans {
-      font-weight: 600;
-      font-size: 1.1rem;
-      margin-bottom: 25px;
-      line-height: 1.6;
-      color: #d9ffd9;
-    }
-    .btn-whatsapp {
-      display: inline-block;
-      background-color: #25d366;
-      color: #fff;
-      text-decoration: none;
-      padding: 16px 30px;
-      font-size: 1.3rem;
-      font-weight: 700;
-      border-radius: 50px;
-      box-shadow: 0 6px 15px rgba(37, 211, 102, 0.5);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .btn-whatsapp:hover {
-      background-color: #1ebe5d;
-      box-shadow: 0 8px 20px rgba(30, 200, 80, 0.7);
-    }
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-      .btn-whatsapp {
-        font-size: 1.1rem;
-        padding: 14px 25px;
-      }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Internet Algar Telecom</title>
+<style>
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .typed-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    border-right: 4px solid white;
+    overflow: hidden;
+    margin-bottom: 40px;
+    min-height: 3rem;
+  }
+  select {
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    width: 320px;
+    max-width: 90vw;
+    margin-bottom: 20px;
+  }
+  button {
+    background-color: #0a8e00;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #068000;
+  }
+  .result {
+    margin-top: 30px;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90vw;
+    text-align: left;
+  }
+  .plan {
+    margin-bottom: 12px;
+  }
+  a.whatsapp-link {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+  }
+  a.whatsapp-link:hover {
+    background-color: #1ebe57;
+  }
+</style>
 </head>
 <body>
   <div class="container">
-    <h1>Internet fibra óptica Algar Telecom</h1>
-    <p>
-      Internet fibra óptica Algar Telecom com planos rápidos e preços que cabem no seu bolso,
-      com até 1GB de velocidade. Atendimento personalizado e instalação rápida nas principais cidades de MG e SP,
-      com contato direto e rápido pelo WhatsApp.
-    </p>
-    <p class="plans">
-      Planos disponíveis:<br />
-      • 300 MB – R$ 100<br />
-      • 600 MB – R$ 110<br />
-      • 1 GB – R$ 160
-    </p>
-    <a href="https://wa.me/5534996743636" target="_blank" class="btn-whatsapp" rel="noopener noreferrer">
-      Fale agora pelo WhatsApp
-    </a>
+    <div class="typed-text" id="typed-text"></div>
+
+    <select id="citySelect">
+      <option value="">-- Selecione sua cidade --</option>
+      <option value="uberlândia">Uberlândia</option>
+      <option value="uberaba">Uberaba</option>
+      <option value="ribeirão preto">Ribeirão Preto</option>
+      <option value="araraquara">Araraquara</option>
+      <option value="patos de minas">Patos de Minas</option>
+    </select>
+    <button onclick="searchPlans()">Buscar planos</button>
+
+    <div class="result" id="result"></div>
+
+    <div style="margin-top: 50px; max-width: 700px; text-align: left;">
+      <h2>Perguntas Frequentes</h2>
+      <p><strong>O suporte técnico demora muito?</strong><br>
+      Não! Te atendemos em até 48h.</p>
+
+      <p><strong>A internet que vocês prometem chega mesmo?</strong><br>
+      Sim! Se prometermos 600MB, chegarão 600MB no seu modem.</p>
+
+      <p><strong>De onde vocês falam?</strong><br>
+      Nossa sede fica em Uberlândia, mas atendemos diversas cidades de MG e SP.</p>
+
+      <p>📧 Caso não tenha WhatsApp, envie um email para <strong>marcos565693@gmail.com</strong></p>
+
+      <p>🎁 Aqui na Algar a instalação é <strong>GRÁTIS</strong> e virando cliente você <strong>concorre a prêmios</strong> sempre!</p>
+    </div>
+
+    <!-- NOVO BOTÃO WHATSAPP -->
+    <div style="margin-top: 40px; text-align: center;">
+      <a class="whatsapp-link" href="https://wa.me/5534996743636" target="_blank">
+        Fale já com um especialista pelo WhatsApp
+      </a>
+    </div>
   </div>
+
+  <script>
+    const text = "Bem-vindo! Veja os planos disponíveis na sua cidade.";
+    const typedText = document.getElementById('typed-text');
+    let index = 0;
+
+    function typeWriter() {
+      if (index < text.length) {
+        typedText.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 50);
+      } else {
+        setInterval(() => {
+          typedText.style.borderRightColor = typedText.style.borderRightColor === 'white' ? 'transparent' : 'white';
+        }, 500);
+      }
+    }
+    window.onload = () => {
+      typeWriter();
+    };
+
+    const plans = {
+      "uberlândia": [
+        { speed: "600MB", price: "R$110" },
+        { speed: "800MB", price: "R$130" },
+        { speed: "1GB", price: "R$160" }
+      ],
+      "uberaba": [
+        { speed: "600MB", price: "R$110" },
+        { speed: "800MB", price: "R$130" },
+        { speed: "1GB", price: "R$160" }
+      ],
+      "ribeirão preto": [
+        { speed: "400MB", price: "R$89,90" },
+        { speed: "600MB", price: "R$99,90" },
+        { speed: "1GB", price: "R$139,90" }
+      ],
+      "araraquara": [
+        { speed: "400MB", price: "R$89,90" },
+        { speed: "600MB", price: "R$99,90" },
+        { speed: "1GB", price: "R$139,90" }
+      ],
+      "patos de minas": [
+        { speed: "600MB", price: "R$110" },
+        { speed: "800MB", price: "R$130" },
+        { speed: "1GB", price: "R$160" }
+      ]
+    };
+
+    function searchPlans() {
+      const select = document.getElementById('citySelect');
+      const city = select.value;
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = "";
+
+      if (!city) {
+        resultDiv.innerHTML = "<p>Por favor, selecione a sua cidade.</p>";
+        return;
+      }
+
+      if(plans[city]) {
+        let html = `<h2>Planos disponíveis para ${capitalize(city)}:</h2>`;
+        plans[city].forEach(plan => {
+          html += `<div class="plan"><strong>${plan.speed}</strong> por <strong>${plan.price}</strong></div>`;
+        });
+        html += `<a class="whatsapp-link" href="https://wa.me/5534996743636" target="_blank">Fale com um especialista agora pelo WhatsApp</a>`;
+        resultDiv.innerHTML = html;
+      } else {
+        resultDiv.innerHTML = `<p>Ainda não coloquei se tem viabilidade na sua cidade.</p>`;
+      }
+    }
+
+    function capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+  </script>
 </body>
 </html>
